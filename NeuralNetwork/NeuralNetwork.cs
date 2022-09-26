@@ -12,6 +12,7 @@ namespace NeuralNetwork
         public float LearnRate;
         private Layer InputLayer;
         private Layer[] InnerLayers;
+        public Func<double, double> Activation = Activations.Sigmoid;
 
         public Network(int inputCount, int[] hiddenLayers, int outputCount)
         {
@@ -27,11 +28,11 @@ namespace NeuralNetwork
 
         public double[] Compute(double[] Input)
         {
-            double[] runningComputation = InputLayer.Compute(Input);
+            double[] runningComputation = InputLayer.Compute(Input, Activation);
 
             foreach (Layer layer in InnerLayers)
             {
-                runningComputation = layer.Compute(runningComputation);
+                runningComputation = layer.Compute(runningComputation, Activation);
             }
             
             return runningComputation;
@@ -59,12 +60,12 @@ namespace NeuralNetwork
             }
         }
 
-        public double[] Compute(double[] Input)
+        public double[] Compute(double[] Input, Func<double, double> Activation)
         {
             double[] Output = new double[Neurons.Length];
 
             for (int i = 0; i < Neurons.Length; i++)
-                Output[i] = Neurons[i].Compute(Input);
+                Output[i] = Neurons[i].Compute(Input, Activation);
 
             return Output;
         }
@@ -85,8 +86,8 @@ namespace NeuralNetwork
         private double Bias;
         public Neuron()
         {
-            Weight = RNG.NextDouble();
-            Bias = RNG.NextDouble();
+            Weight = RNG.NextDouble() * 2 - 1;
+            Bias = RNG.NextDouble() * 2 - 1;
         }
 
         public Neuron(double weight, double bias)
@@ -105,12 +106,12 @@ namespace NeuralNetwork
             Bias = MinMax(Bias + delta);
         }
 
-        public double Compute(double[] Values)
+        public double Compute(double[] Values, Func<double, double> Activation)
         {
             double Output = 0;
             foreach (double Value in Values)
                 Output += Weight * Value;
-            return Output + Bias;
+            return Activation(Output + Bias);
         }
 
         private double MinMax(double value)
@@ -119,5 +120,16 @@ namespace NeuralNetwork
         }
     }
 
+    public static class Activations
+    {
+        public static double Sigmoid(double Value)
+        {
+            return 1 / (1 + Math.Exp(-Value));
+        }
 
+        public static double Boolean(double Value)
+        {
+            return Value > 0 ? 1 : -1;
+        }
+    }
 }

@@ -16,6 +16,7 @@ namespace NeuralNetwork
             Network network = new Network(2, new int[1] {18}, 2);
             double[] Computation = network.Compute(new double[] { 0.1, 0.3 });
             Console.WriteLine("Computation: " + string.Join(", ", Computation));
+
             // CreateHostBuilder(args).Build().Run();
         }
 
