@@ -14,7 +14,7 @@
         "outputPath": "/Users/skovborg/Projects/NeuralNetwork/NeuralNetwork/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/skovborg/.nuget/NuGet/NuGet.Config"
+          "/Users/skovborg/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

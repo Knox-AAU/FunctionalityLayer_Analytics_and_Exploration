@@ -6,25 +6,37 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using System.IO;
 
-namespace NeuralNetwork
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            Network network = new Network(2, new int[1] {18}, 2);
-            double[] Computation = network.Compute(new double[] { 0.1, 0.3 });
-            Console.WriteLine("Computation: " + string.Join(", ", Computation));
+        NeuralNetwork.Network network = new NeuralNetwork.Network(9, new int[1] {18}, 9);
+        NeuralNetwork.DataPoint[] dataPoints;
 
-            // CreateHostBuilder(args).Build().Run();
+        string fileContent = File.ReadAllText("./data.json");
+        dataPoints = JsonConvert.DeserializeObject<NeuralNetwork.DataPoint[]>(fileContent);
+
+        for(int i= 0; i < 5000; i++)
+        {
+            network.Epoch(dataPoints);
+
+            
+            Console.WriteLine($"Finished epoch #{i}: Cost is {network.AggregateCost(dataPoints)}");
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+        double[] Computation = network.Compute(dataPoints[0].Board);
+        Console.WriteLine("Computation: " + string.Join(", ", Computation));
+
+        // CreateHostBuilder(args).Build().Run();
     }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
 }
