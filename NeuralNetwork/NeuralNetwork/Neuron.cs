@@ -11,6 +11,8 @@ namespace NeuralNetwork
 
         public double WeightGradient = 0f;
         public double BiasGradient = 0f;
+        public bool GoodWeightNudge = false;
+        public bool GoodBiasNudge = false;  
 
         public Neuron()
         {

@@ -7,7 +7,7 @@ namespace NeuralNetwork
     {
         public static double Sigmoid(double Value)
         {
-            return 2 / (1 + Math.Exp(-Value)) - 1;
+            return 2 / (1 + Math.Exp(-Value*2)) - 1;
         }
 
         public static double Boolean(double Value)

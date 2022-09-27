@@ -65,7 +65,7 @@ namespace NeuralNetwork
 
         public void Epoch(DataPoint[] data)
         {
-            const double delta = 0.0000001;
+            const double delta = 1E-7;
             double originalCost = AggregateCost(data);
 
             foreach (Layer layer in InnerLayers)
@@ -76,6 +76,8 @@ namespace NeuralNetwork
                     double deltaCost = AggregateCost(data) - originalCost;
                     neuron.NudgeWeight(-delta);
                     neuron.WeightGradient = deltaCost / delta;
+
+                    neuron.GoodWeightNudge = neuron.WeightGradient < 0;
                 }
             }
             foreach (Layer layer in InnerLayers)
@@ -86,19 +88,24 @@ namespace NeuralNetwork
                     double deltaCost = AggregateCost(data) - originalCost;
                     neuron.NudgeBias(-delta);
                     neuron.BiasGradient = deltaCost / delta;
+
+                    neuron.GoodBiasNudge = neuron.WeightGradient < 0;
                 }
             }
 
-            ApplyGradients();
+            ApplyGradients(data);
         }
 
-        private void ApplyGradients()
+        private void ApplyGradients(DataPoint[] data)
         {
             foreach( Layer layer in InnerLayers)
             {
                 foreach ( Neuron neuron in layer.Neurons)
                 {
-                    neuron.NudgeWeight(neuron.WeightGradient * LearnRate);
+                    if (neuron.GoodWeightNudge)
+                        neuron.NudgeWeight(-neuron.WeightGradient * LearnRate);
+                    else
+                        neuron.NudgeWeight(-neuron.WeightGradient * LearnRate);
                 }
             }
 
@@ -106,7 +113,10 @@ namespace NeuralNetwork
             {
                 foreach (Neuron neuron in layer.Neurons)
                 {
-                    neuron.NudgeWeight(neuron.BiasGradient * LearnRate);
+                    if (neuron.GoodBiasNudge)
+                        neuron.NudgeBias(neuron.BiasGradient * LearnRate);
+                    else
+                        neuron.NudgeBias(-neuron.BiasGradient * LearnRate);
                 }
             }
         }
