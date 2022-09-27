@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GHoMubSdiTs8P51XbDG7tzo/B7vB/7PyCgCBQ5AiCv+Ha/COg3K93512C1FZvXIiYlI1QckzTFT8tMWbRDYH7A==",
+  "dgSpecHash": "b6xIBaxv9yI5vQ7/DEKerSh/L1yTvoobHvcqoI8Wc2Fpc+QkXu7m2l9eSt6KUgjYuv1TINBdUhXc8GyPAb4ezA==",
   "success": true,
-  "projectFilePath": "/Users/skovborg/Projects/NeuralNetwork/NeuralNetwork/NeuralNetwork.csproj",
+  "projectFilePath": "C:\\programs\\github\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

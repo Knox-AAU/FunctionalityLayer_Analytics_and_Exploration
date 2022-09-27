@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/Users/skovborg/.nuget/packages/": {}
+    "C:\\Users\\furda\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/skovborg/Projects/NeuralNetwork/NeuralNetwork/NeuralNetwork.csproj",
+      "projectUniqueName": "C:\\programs\\github\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj",
       "projectName": "NeuralNetwork",
-      "projectPath": "/Users/skovborg/Projects/NeuralNetwork/NeuralNetwork/NeuralNetwork.csproj",
-      "packagesPath": "/Users/skovborg/.nuget/packages/",
-      "outputPath": "/Users/skovborg/Projects/NeuralNetwork/NeuralNetwork/obj/",
+      "projectPath": "C:\\programs\\github\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj",
+      "packagesPath": "C:\\Users\\furda\\.nuget\\packages\\",
+      "outputPath": "C:\\programs\\github\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/skovborg/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\furda\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
