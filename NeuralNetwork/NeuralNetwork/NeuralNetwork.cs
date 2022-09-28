@@ -7,7 +7,7 @@ namespace NeuralNetwork
 
 	public class Network
 	{
-		public float LearnRate = 0.5f;
+		public float LearnRate = 0.1f;
 		private Layer[] InnerLayers;
 		public Func<double, double> Activation;
 
@@ -28,7 +28,7 @@ namespace NeuralNetwork
 			/* Create output layer */
 			InnerLayers[hiddenLayers.Length + 1] = new Layer(outputCount, InnerLayers[hiddenLayers.Length].Neurons.Length);
 
-			Activation = Activations.Sigmoid;
+			Activation = Activations.DoubleSigmoid;
 
 		}
 
@@ -56,7 +56,7 @@ namespace NeuralNetwork
 
 		public double Cost(DataPoint data)
 		{
-			double[] actual = Compute(data.Board);
+			double[] actual = Compute(data.State);
 
 			double cost = 0;
 			for (int i = 0; i < data.Answer.Length; i++)

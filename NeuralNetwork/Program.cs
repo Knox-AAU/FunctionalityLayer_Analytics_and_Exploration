@@ -13,46 +13,46 @@ public class Program
 {
 	public static void Main(string[] args)
 	{
-		NeuralNetwork.Network network = new NeuralNetwork.Network(9, new int[] { 18 }, 9);
+		/* Setup Neural Network */
+		NeuralNetwork.Network network = new NeuralNetwork.Network(2, new int[] { 2 }, 2);
 		network.LearnRate = 0.1f;
-		NeuralNetwork.DataPoint[] dataPoints;
+		network.Activation = NeuralNetwork.Activations.Sigmoid;
 
-		string fileContent = File.ReadAllText("./data.json");
-		dataPoints = JsonConvert.DeserializeObject<NeuralNetwork.DataPoint[]>(fileContent);
+		/* Read data points from file */
+		string fileContent = File.ReadAllText("./data_berries.json");
+		NeuralNetwork.DataPoint[] AllDataPoints = JsonConvert.DeserializeObject<NeuralNetwork.DataPoint[]>(fileContent);
 
-		for (int i = 0; i < 501; i++)
+		/* Segment data points into training data and testing data */
+		int TrainingDataCount = (int)(AllDataPoints.Length * 0.8);
+		NeuralNetwork.DataPoint[] TrainingData = AllDataPoints.Take(TrainingDataCount).ToArray();
+		NeuralNetwork.DataPoint[] TestData = AllDataPoints.Skip(TrainingDataCount).ToArray();
+
+		NeuralNetwork.Utilities.RunEpochs(network, TrainingData, 1000, 7);
+
+		/* Test the network */
+
+		int TrainingCorrectGuess = 0;
+		foreach (NeuralNetwork.DataPoint dataPoint in TrainingData)
 		{
-			network.Epoch(dataPoints);
-			double currentCost = network.AggregateCost(dataPoints);
-
-			if (i % 10 == 0)
-				Console.WriteLine($"Finished epoch #{i}: Cost is {network.AggregateCost(dataPoints)}");
-		}
-
-		double[] Computation = network.Compute(dataPoints[0].Board);
-		string[] computationRounded = new string[Computation.Length];
-		for (int i = 0; i < Computation.Length; i++)
-			computationRounded[i] = Math.Round(Computation[i], 2).ToString().PadRight(4).PadLeft(5);
-		string[] expectedRounded = new string[dataPoints[0].Answer.Length];
-		for (int i = 0; i < dataPoints[0].Answer.Length; i++)
-			expectedRounded[i] = Math.Round(dataPoints[0].Answer[i], 2).ToString().PadRight(4).PadLeft(5);
-		Console.WriteLine("Computation: " + string.Join(", ", computationRounded));
-		Console.WriteLine("Expected:    " + string.Join(", ", expectedRounded));
-
-		int CorrectGuesses = 0;
-		int TotalPoints = dataPoints.Length;
-		foreach (NeuralNetwork.DataPoint dataPoint in dataPoints)
-		{
-			double[] ComputedGuess = network.Compute(dataPoint.Board);
+			double[] ComputedGuess = network.Compute(dataPoint.State);
 			int GuessHighestIndex = IndexOfMax(ComputedGuess);
 
 			if (dataPoint.Answer[GuessHighestIndex] == 1)
-				CorrectGuesses++;
+				TrainingCorrectGuess++;
 		}
 
-		Console.WriteLine($"Correct guesses: {CorrectGuesses}/{TotalPoints} ({(double)CorrectGuesses / TotalPoints * 100}%)");
+		int TestCorrectGuess = 0;
+		foreach (NeuralNetwork.DataPoint dataPoint in TestData)
+		{
+			double[] ComputedGuess = network.Compute(dataPoint.State);
+			int GuessHighestIndex = IndexOfMax(ComputedGuess);
 
-		Console.WriteLine("Press any key to exit...");
+			if (dataPoint.Answer[GuessHighestIndex] == 1)
+				TestCorrectGuess++;
+		}
+
+		Console.WriteLine($"Training Data Score: {TrainingCorrectGuess}/{TrainingData.Length} ({(double)TrainingCorrectGuess / TrainingData.Length * 100}%)");
+		Console.WriteLine($"Test Data Score:     {TestCorrectGuess}/{TestData.Length} ({(double)TestCorrectGuess / TestData.Length * 100}%)");
 
 		// CreateHostBuilder(args).Build().Run();
 	}

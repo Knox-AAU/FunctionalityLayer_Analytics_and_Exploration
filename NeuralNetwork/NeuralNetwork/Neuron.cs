@@ -39,19 +39,19 @@ namespace NeuralNetwork
 			Initialise(weights.Length);
 			for (int i = 0; i < weights.Length; i++)
 			{
-				Weights[i] = MinMax(weights[i]);
+				Weights[i] = Utilities.MinMax(weights[i]);
 			}
-			Bias = MinMax(bias);
+			Bias = Utilities.MinMax(bias);
 		}
 
 		public void NudgeWeight(double delta, int index)
 		{
-			Weights[index] = MinMax(Weights[index] + delta);
+			Weights[index] = Utilities.MinMax(Weights[index] + delta);
 		}
 
 		public void NudgeBias(double delta)
 		{
-			Bias = MinMax(Bias + delta);
+			Bias = Utilities.MinMax(Bias + delta);
 		}
 
 		public double Compute(double[] Values)
@@ -62,9 +62,5 @@ namespace NeuralNetwork
 			return Output + Bias;
 		}
 
-		private double MinMax(double value)
-		{
-			return Math.Max(Math.Min(1, value), -1);
-		}
 	}
 }

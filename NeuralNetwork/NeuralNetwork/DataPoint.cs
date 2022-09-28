@@ -1,15 +1,15 @@
 ﻿using System;
 namespace NeuralNetwork
 {
-    public class DataPoint
-    {
-        public double[] Board;
-        public double[] Answer;
+	public class DataPoint
+	{
+		public double[] State;
+		public double[] Answer;
 
-        public DataPoint(double[] board, double[] answer)
-        {
-            Board = board;
-            Answer = answer;
-        }
-    }
+		public DataPoint(double[] state, double[] answer)
+		{
+			State = state;
+			Answer = answer;
+		}
+	}
 }
