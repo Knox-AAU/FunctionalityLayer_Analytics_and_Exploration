@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Numerics;
+using System.IO;
 
 
 namespace NeuralNetwork
@@ -7,11 +7,18 @@ namespace NeuralNetwork
 
 	public class Network
 	{
-		public float LearnRate { get; private set; } = 0.1f;
+		public double LearnRate { get; private set; } = 0.1f;
 		public Func<double, double> Activation { get; private set; } = Activations.Contain;
         
 		private Layer[] InnerLayers;
 
+
+        public Network(Layer[] layers, double learnRate)
+        {
+            InnerLayers = layers;
+			LearnRate = learnRate;
+        }
+        
 		public Network(int inputCount, int[] hiddenLayers, int outputCount)
 		{
 			/* Allocate all layers */
@@ -146,5 +153,69 @@ namespace NeuralNetwork
 				}
 			}
 		}
+
+        /// <summary>
+		/// Saves the network to a file, which can be loaded later.
+		/// </summary>
+		/// <param name="fileInfo"></param>
+		public void Serialize(FileInfo fileInfo)
+        {
+            {
+                using (FileStream stream = fileInfo.OpenWrite())
+                {
+                    using (BinaryWriter writer = new BinaryWriter(stream))
+                    {
+                        writer.Write(LearnRate);
+                        writer.Write(InnerLayers.Length);
+                        foreach (Layer layer in InnerLayers)
+                        {
+                            writer.Write(layer.Neurons.Length);
+                            foreach (Neuron neuron in layer.Neurons)
+                            {
+                                writer.Write(neuron.Weights.Length);
+                                foreach (double weight in neuron.Weights)
+                                    writer.Write(weight);
+                                writer.Write(neuron.Bias);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+		/// Loads a network from a file.
+		/// </summary>
+		/// <param name="fileInfo"></param>
+		/// <returns></returns>
+        public static Network Deserialize(FileInfo fileInfo)
+        {
+            using (FileStream stream = fileInfo.OpenRead())
+            {
+                using (BinaryReader reader = new BinaryReader(stream))
+                {
+                    double learnRate = reader.ReadDouble();
+                    int layerCount = reader.ReadInt32();
+                    Layer[] layers = new Layer[layerCount];
+                    for (int i = 0; i < layers.Length; i++)
+                    {
+                        int neuronCount = reader.ReadInt32();
+                        Neuron[] neurons = new Neuron[neuronCount];
+                        for (int j = 0; j < neurons.Length; j++)
+                        {
+                            int weightCount = reader.ReadInt32();
+                            double[] weights = new double[weightCount];
+                            for (int k = 0; k < weights.Length; k++)
+                                weights[k] = reader.ReadDouble();
+                            double bias = reader.ReadDouble();
+                            neurons[j] = new Neuron(weights, bias);
+                        }
+                        layers[i] = new Layer(neurons);
+                    }
+					layers[0].IsInputLayer = true;
+                    return new Network(layers, learnRate);
+                }
+            }
+        }
 	}
 }

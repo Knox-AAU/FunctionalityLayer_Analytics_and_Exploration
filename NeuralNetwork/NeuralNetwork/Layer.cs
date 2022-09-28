@@ -9,6 +9,11 @@ namespace NeuralNetwork
 
 		public bool IsInputLayer = false;
 
+
+		public Layer(Neuron[] neurons)
+        {
+			Neurons = neurons;
+        }
 		public Layer(int count, int prevLayerNodes)
 		{
 			Neurons = new Neuron[count];

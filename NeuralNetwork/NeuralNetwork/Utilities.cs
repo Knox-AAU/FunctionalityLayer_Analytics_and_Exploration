@@ -36,7 +36,7 @@ namespace NeuralNetwork
 		public static void CalculateEvalutation(Network network, DataPoint[] trainingData, DataPoint[] testData) {
 
 			int TrainingCorrectGuess = 0;
-			foreach (NeuralNetwork.DataPoint dataPoint in trainingData)
+			foreach (DataPoint dataPoint in trainingData)
 			{
 				double[] ComputedGuess = network.Compute(dataPoint.State);
 				int GuessHighestIndex = IndexOfMax(ComputedGuess);
@@ -46,7 +46,7 @@ namespace NeuralNetwork
 			}
 
 			int TestCorrectGuess = 0;
-			foreach (NeuralNetwork.DataPoint dataPoint in testData)
+			foreach (DataPoint dataPoint in testData)
 			{
 				double[] ComputedGuess = network.Compute(dataPoint.State);
 				int GuessHighestIndex = IndexOfMax(ComputedGuess);
