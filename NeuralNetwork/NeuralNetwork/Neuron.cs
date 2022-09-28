@@ -3,50 +3,68 @@
 
 namespace NeuralNetwork
 {
-    public class Neuron
-    {
-        private static Random RNG = new Random();
-        private double Weight;
-        private double Bias;
+	public class Neuron
+	{
+		private static Random RNG = new Random();
+		public double[] Weights { get; private set; }
+		public double Bias { get; private set; }
 
-        public double WeightGradient = 0f;
-        public double BiasGradient = 0f;
-        public bool GoodWeightNudge = false;
-        public bool GoodBiasNudge = false;  
+		public double[] WeightGradient;
+		public double BiasGradient = 0f;
+		public bool[] GoodWeightNudge;
+		public bool GoodBiasNudge;
 
-        public Neuron()
-        {
-            Weight = RNG.NextDouble() * 2 - 1;
-            Bias = RNG.NextDouble() * 2 - 1;
-        }
+		private void Initialise(int Length)
+		{
+			/* Initialise the 'static' arrays */
+			Weights = new double[Length];
+			GoodWeightNudge = new bool[Length];
+			WeightGradient = new double[Length];
 
-        public Neuron(double weight, double bias)
-        {
-            Weight = MinMax(weight);
-            Bias = MinMax(bias);
-        }
+		}
 
-        public void NudgeWeight(double delta)
-        {
-            Weight = MinMax(Weight + delta);
-        }
+		public Neuron(int nodesIn)
+		{
+			Initialise(nodesIn);
+			for (int i = 0; i < Weights.Length; i++)
+			{
+				Weights[i] = RNG.NextDouble() * 2 - 1;
+			}
+			Bias = RNG.NextDouble() * 2 - 1;
+		}
 
-        public void NudgeBias(double delta)
-        {
-            Bias = MinMax(Bias + delta);
-        }
 
-        public double Compute(double[] Values, Func<double, double> Activation)
-        {
-            double Output = 0;
-            foreach (double Value in Values)
-                Output += Weight * Value;
-            return Activation(Output + Bias);
-        }
+		public Neuron(double[] weights, double bias)
+		{
+			Initialise(weights.Length);
+			for (int i = 0; i < weights.Length; i++)
+			{
+				Weights[i] = MinMax(weights[i]);
+			}
+			Bias = MinMax(bias);
+		}
 
-        private double MinMax(double value)
-        {
-            return Math.Max(Math.Min(1, value), -1);
-        }
-    }
+		public void NudgeWeight(double delta, int index)
+		{
+			Weights[index] = MinMax(Weights[index] + delta);
+		}
+
+		public void NudgeBias(double delta)
+		{
+			Bias = MinMax(Bias + delta);
+		}
+
+		public double Compute(double[] Values)
+		{
+			double Output = 0;
+			for (int i = 0; i < Values.Length; i++)
+				Output += Weights[i] * Values[i];
+			return Output + Bias;
+		}
+
+		private double MinMax(double value)
+		{
+			return Math.Max(Math.Min(1, value), -1);
+		}
+	}
 }
