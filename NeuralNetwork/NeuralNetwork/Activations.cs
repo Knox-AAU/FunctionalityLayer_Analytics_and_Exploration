@@ -19,5 +19,10 @@ namespace NeuralNetwork
         {
             return Value > 0 ? 1 : -1;
         }
+
+        public static double Contain(double Value)
+        {
+            return Utilities.MinMax(Value);
+        }
     }
 }

@@ -7,9 +7,10 @@ namespace NeuralNetwork
 
 	public class Network
 	{
-		public float LearnRate = 0.1f;
+		public float LearnRate { get; private set; } = 0.1f;
+		public Func<double, double> Activation { get; private set; } = Activations.Contain;
+        
 		private Layer[] InnerLayers;
-		public Func<double, double> Activation;
 
 		public Network(int inputCount, int[] hiddenLayers, int outputCount)
 		{
@@ -32,7 +33,19 @@ namespace NeuralNetwork
 
 		}
 
-		public double[] Compute(double[] Input)
+        public Network SetLearnRate(double rate)
+        {
+            LearnRate = (float)rate;
+            return this;
+        }
+
+        public Network SetActivation(Func<double, double> activation)
+        {
+            Activation = activation;
+			return this;
+        }
+
+        public double[] Compute(double[] Input)
 		{
 			double[] runningComputation = Input;
 
