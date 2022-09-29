@@ -31,10 +31,32 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
         }
         else
         {
-            app.UseExceptionHandler("/Error");
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
+
+            app.UseStaticFiles();
+
+            app.UseRouting();
+            app.UseWebSockets();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+                endpoints.MapFallbackToPage("/_Host");
+            });
         }
 
         app.UseStaticFiles();

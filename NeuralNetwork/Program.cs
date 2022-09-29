@@ -13,6 +13,8 @@ public class Program
 {
 	public static void Main(string[] args)
 	{
+    CreateHostBuilder(args).Build().Run();
+    
 		/* Declare the neural network */
 		NeuralNetwork.Network network;
 
@@ -47,8 +49,6 @@ public class Program
 
 		/* Store network on disk */
 		network.Serialize(new FileInfo("./Berries.nn"));
-
-		// CreateHostBuilder(args).Build().Run();
 	}
 
 	public static int IndexOfMax(double[] doubles)
