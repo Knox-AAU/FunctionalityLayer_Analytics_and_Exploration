@@ -27,7 +27,8 @@ public class Program
 		if (File.Exists("./Berries.nn"))
         {
 			network = NeuralNetwork.Network.Deserialize(new FileInfo("./Berries.nn"));
-        }
+			Console.WriteLine($"Loaded network {network.GetLayout()}...");
+		}
         /* Otherwise, create and train it from data */
 		else
         {

@@ -52,6 +52,18 @@ namespace NeuralNetwork
 			return this;
         }
 
+		public string GetLayout() 
+		{
+			string layout = "(";
+			for (int i = 0; i < InnerLayers.Length; i++)
+			{
+				layout += InnerLayers[i].Neurons.Length;
+				if (i < InnerLayers.Length - 1)
+					layout += "x";
+			}
+			return layout + ")";
+		}
+
         public double[] Compute(double[] Input)
 		{
 			double[] runningComputation = Input;

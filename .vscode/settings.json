@@ -1,0 +1,28 @@
+{
+    
+  "json.schemas": [
+    
+    {
+      "fileMatch": [
+        "NeuralNetwork/TrainingData/*.json"
+      ],
+      "schema": {
+        "type": "array",
+        "items": {
+            "type" : "object",
+            "properties": {
+                "state" : {
+                    "type":"string"
+                },
+                "answer": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            }
+        }
+      }
+    }
+  ]
+}
