@@ -18,7 +18,7 @@ namespace NeuralNetwork
             double[] Computation = network.Compute(new double[] { 0.1, 0.3 });
             Console.WriteLine("Computation: " + string.Join(", ", Computation));
 
-            // CreateHostBuilder(args).Build().Run();
+        CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
