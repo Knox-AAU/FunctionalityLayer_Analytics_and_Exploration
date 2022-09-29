@@ -20,7 +20,7 @@ using NeuralNetwork;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorCompiledItemMetadataAttribute("RouteTemplate", "/")]
-//    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4cf01f83d5d328163bc4b8ff054fe9141516d50a", @"/Pages/_Host.cshtml")]
+    //[global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4cf01f83d5d328163bc4b8ff054fe9141516d50a", @"/Pages/_Host.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"604a69e3e197beabc9e290136980d36d65bcf1bb", @"/Pages/_ViewImports.cshtml")]
     public class Pages__Host : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
