@@ -27,7 +27,8 @@ namespace NeuralNetwork
 					TimeSpan estimatedRemainingTime = deltaTime * (epochs / (i + 1.0f) - 1);
 					string epochNum = $"{i.ToString().PadLeft(epochsWidth)}/{epochs}";
 					string cost = currentCost.ToString("0.0000");
-					Console.Write($"Finished epoch {epochNum} Cost: {cost} ETA: {estimatedRemainingTime:h':'mm':'ss}\r");
+					string eta = $"{estimatedRemainingTime:h':'mm':'ss}";
+					Console.Write($"Finished epoch {epochNum} Cost: {cost} ETA: {eta.PadRight(20)}\r");
 				}
 			}
 			Console.WriteLine();
