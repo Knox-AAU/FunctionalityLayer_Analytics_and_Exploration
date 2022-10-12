@@ -1,0 +1,39 @@
+﻿@page "/Counter"
+@using System.Net.WebSockets
+
+<PageTitle>Counter</PageTitle>
+
+<h1>WebSocket Sample Application</h1>
+    <p id="stateLabel">Ready to connect...</p>
+    <div>
+        <label for="connectionUrl">WebSocket Server URL:</label>
+        <input id="connectionUrl" />
+        <button id="connectButton" type="submit" @onclick="Connect">Connect</button>
+    </div>
+    <p></p>
+    <div>
+        <label for="sendMessage">Message to send:</label>
+        <input id="sendMessage" disabled />
+        <button id="sendButton" type="submit" disabled>Send</button>
+        <button id="closeButton" disabled>Close Socket</button>
+    </div>
+
+    <h2>Communication Log</h2>
+    <table style="width: 800px">
+        <thead>
+            <tr>
+                <td style="width: 100px">From</td>
+                <td style="width: 100px">To</td>
+                <td>Data</td>
+            </tr>
+        </thead>
+        <tbody id="commsLog">
+        </tbody>
+    </table>
+
+@code {
+    private async Task Connect()
+    {
+        Console.WriteLine("Clicked connecd");
+    }
+}
