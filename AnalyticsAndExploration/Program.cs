@@ -19,8 +19,10 @@ namespace AnalyticsAndExploration
 			builder.Services.AddControllers();
 
 
-
 			var app = builder.Build();
+
+			
+			
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())
@@ -47,10 +49,9 @@ namespace AnalyticsAndExploration
 
 
 			NeuralNetwork.Network network = new(2, new int[] { 2, 2}, 2);
-
+			network.SetLearnRate(0.1d);
             Thread t = new Thread(new ThreadStart(() => TrainAndEvaluateNetwork(network)));
 			t.Start();
-
 
             app.Run();
 		}
