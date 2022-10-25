@@ -34,6 +34,7 @@ function create_ws() {
 
 	ws.onopen = () => {
 		set_status("Connected");
+		init_draw(ws);
 		retry_count = 0;
 		clearTimeout(retry_timeout);
 		console.log("connected")

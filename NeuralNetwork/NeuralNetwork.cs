@@ -42,7 +42,7 @@ namespace NeuralNetwork
 
         public Network SetLearnRate(double rate)
         {
-            LearnRate = (float)rate;
+            LearnRate = (double)rate;
             return this;
         }
 
