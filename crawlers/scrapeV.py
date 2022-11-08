@@ -1,5 +1,4 @@
-import time
-import re
+import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,10 +6,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.service import Service
 
+abs_path = os.path.dirname(__file__)
+rel_path = r"lib\\geckodriver.exe"
+
 option = webdriver.FirefoxOptions()
 option.headless = True
 option.binary_location = r"C:\\Program Files\\Mozilla Firefox\\firefox.exe"
-driverService = Service(r"C:\\Users\Ander\\crawler\\lib\\geckodriver.exe")
+driverService = Service(os.path.join(abs_path, rel_path))
 driver = webdriver.Firefox(service=driverService, options=option)
 
 articles = 0
@@ -31,14 +33,16 @@ def scrapeArticle(driver):
     
     #Body
     article = soup.find("div", class_="richText neos-nodetypes-text")
+    if soup.find("div", class_="richText neos-nodetypes-text"):
+        article = soup.find("div", class_="richText neos-nodetypes-text")
+    else: 
+        article = soup.find("div", class_="richText")
     for p in article.find_all("p"):
         article_text += p.text  
     
     return article_text
 
 def getArticles(driver, page_num, articles):
-    print(driver.current_url)
-
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
 
@@ -47,7 +51,10 @@ def getArticles(driver, page_num, articles):
     #Getting the links to articles
     for tag in soup.find_all("a", class_="focus:outline-none"):
         articles += 1
-        driver.get(tag["href"])
+        if tag["href"] == "https://www.venstre.dk/nyheder/sommergruppemode-det-skal-kunne-betale-sig-at-arbejde":
+            continue
+        else: 
+            driver.get(tag["href"])
 
         #Saving the articles
         if (articles < 10):

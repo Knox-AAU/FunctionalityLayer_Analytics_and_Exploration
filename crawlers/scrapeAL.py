@@ -1,5 +1,4 @@
-import time
-import re
+import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,10 +6,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.service import Service
 
+abs_path = os.path.dirname(__file__)
+rel_path = r"lib\\geckodriver.exe"
+
 option = webdriver.FirefoxOptions()
-#option.headless = True
+option.headless = True
 option.binary_location = r"C:\\Program Files\\Mozilla Firefox\\firefox.exe"
-driverService = Service(r"C:\\Users\Ander\\crawler\\lib\\geckodriver.exe")
+driverService = Service(os.path.join(abs_path, rel_path))
 driver = webdriver.Firefox(service=driverService, options=option)
 
 articles = 0
@@ -23,8 +25,11 @@ def scrapeArticle(driver):
     article_text = ""
     
     #Title
-    article_text = soup.find("h1", class_="page-title").text
-    article_text += ". "
+    if soup.find("h1", class_="page-title"):
+        article_text = soup.find("h1", class_="page-title").text
+        article_text += ". "
+    else:
+        return article_text
 
     #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
@@ -60,7 +65,7 @@ def getArticles(driver, page_num, articles):
                 file = f.read()
                 file_length = file.split()
                 if len(file_length) < 100:
-                    print("Skipping")
+                    print("Skipping: file length {}".format(file_length))
                     articles -= 1
                     skipped_articles += 1
 
@@ -71,7 +76,7 @@ def getArticles(driver, page_num, articles):
                 file = f.read()
                 file_length = file.split()
                 if len(file_length) < 100:
-                    print("Skipping")
+                    print("Skipping: file length {}".format(file_length))
                     articles -= 1
                     skipped_articles += 1
         

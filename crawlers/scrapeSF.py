@@ -1,5 +1,4 @@
-import time
-import re
+import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,10 +6,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.service import Service
 
+abs_path = os.path.dirname(__file__)
+rel_path = r"lib\\geckodriver.exe"
+
 option = webdriver.FirefoxOptions()
-#option.headless = True
+option.headless = True
 option.binary_location = r"C:\\Program Files\\Mozilla Firefox\\firefox.exe"
-driverService = Service(r"C:\\Users\Ander\\crawler\\lib\\geckodriver.exe")
+driverService = Service(os.path.join(abs_path, rel_path))
 driver = webdriver.Firefox(service=driverService, options=option)
 
 articles = 0
@@ -23,7 +25,11 @@ def scrapeArticle(driver):
     article_text = ""
     
     #Title
-    article = soup.find("div", class_="col-xs-12 col-sm-8")
+    if soup.find("div", class_="col-xs-12 col-sm-8"):
+        article = soup.find("div", class_="col-xs-12 col-sm-8")
+    else:
+        article = soup.find("div", class_="col-xs-12")
+    
     article_text = article.find("h1", attrs={"class": None}).text
     article_text += ". "
 
@@ -38,7 +44,7 @@ def scrapeArticle(driver):
         if index == 0:
             index += 1
             continue
-        article_text += p.text  
+        article_text += p.text + " "
     
     return article_text
 
