@@ -32,8 +32,6 @@ def scrapeArticle(driver):
         article_text = soup.find("h1", class_="o-headline-1 inline").text
     article_text += ". "
 
-    #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
     #Subtitle
     article_text += soup.find("div", class_="leading-130").text
 
@@ -94,13 +92,6 @@ def getArticles(driver, page_num, articles):
             break
 
     print("Skipped: {} articles".format(skipped_articles))
-
-    #if (articles < 100): 
-    #    page_num += 1
-    #    #Next page
-    #    driver.get("{}".format(page_num))
-
-    #    getArticles(driver, page_num, articles)
 
 #Initial page with articles
 driver.get("https://www.radikale.dk/aktuelt/?typeId=-1&offset=90&limit=9")
