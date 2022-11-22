@@ -1,4 +1,4 @@
-module.exports = [
+[
 	"accelerando",
 	"ad",
 	"adagio",
@@ -843,4 +843,3 @@ module.exports = [
 	"østud",
 	"østude"
 ]
-
