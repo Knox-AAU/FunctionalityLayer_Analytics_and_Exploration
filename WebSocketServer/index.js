@@ -18,7 +18,6 @@ app.use(morgan("combined"));
 
 
 /* Decode neural network from binary file */
-
 const neuronParser = new Parser()
 	.int32le('weightCount')
 	.array('weights', {
