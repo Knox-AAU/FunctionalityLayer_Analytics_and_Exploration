@@ -15,9 +15,6 @@ option.binary_location = r"C:\\Program Files\\Mozilla Firefox\\firefox.exe"
 driverService = Service(os.path.join(abs_path, rel_path))
 driver = webdriver.Firefox(service=driverService, options=option)
 
-articles = 0
-page_num = 1  
-
 def scrapeArticle(driver):
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
@@ -41,12 +38,8 @@ def scrapeArticle(driver):
     return article_text
 
 def getArticles(driver, page_num, articles):
-    print(driver.current_url)
-
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
-
-    skipped_articles = 0
 
     #Getting the links to articles
     for tag in soup.find_all("", class_=""):
@@ -63,7 +56,6 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-                    skipped_articles += 1
 
         else:
             with open("articles\\{}.txt".format(articles), "w", encoding="utf-8") as f:
@@ -74,7 +66,6 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-                    skipped_articles += 1
         
         f.close
 
@@ -89,6 +80,9 @@ def getArticles(driver, page_num, articles):
         driver.get("{}".format(page_num))
 
         getArticles(driver, page_num, articles)
+
+articles = 0
+page_num = 1  
 
 #Initial page with articles
 driver.get("")

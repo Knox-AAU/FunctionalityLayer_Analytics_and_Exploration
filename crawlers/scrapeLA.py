@@ -41,8 +41,6 @@ def getArticles(driver, page_num, articles):
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
 
-    skipped_articles = 0
-
     #Getting links to articles
     for tag in soup.find_all("a", class_="grid-item-inner"):
         articles += 1
@@ -58,7 +56,6 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-                    skipped_articles += 1
 
         else:
             with open("articles\\{}.txt".format(articles), "w", encoding="utf-8") as f:
@@ -69,7 +66,6 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-                    skipped_articles += 1
         
         f.close
 

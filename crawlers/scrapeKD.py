@@ -58,7 +58,6 @@ def getArticles(driver, page_num, articles):
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
 
-    skipped_articles = 0
     article_index = articles
 
     #Getting the links to articles
@@ -76,7 +75,6 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-                    skipped_articles += 1
 
         else:
             with open("articles\\{}.txt".format(articles), "w", encoding="utf-8") as f:
@@ -87,7 +85,6 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-                    skipped_articles += 1
         
         f.close
 
@@ -96,6 +93,7 @@ def getArticles(driver, page_num, articles):
         if articles == 100:
             break
 
+    #KD doesn't have 100 articles in their archive
     if (article_index == articles):
         print("No new articles found!")
     elif (articles < 100): 

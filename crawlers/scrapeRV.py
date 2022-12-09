@@ -54,8 +54,6 @@ def getArticles(driver, page_num, articles):
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
 
-    skipped_articles = 0
-
     #Getting the links to articles
     for tag in soup.find_all("a", class_="spa-link uppercase hover:text-pink leading-100 cursor-pointer spa-link--prefetched"):
         articles += 1
@@ -73,7 +71,6 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-                    skipped_articles += 1
 
         else:
             with open("articles\\{}.txt".format(articles), "w", encoding="utf-8") as f:
@@ -84,14 +81,11 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-                    skipped_articles += 1
 
         print("{}: ".format(articles) + tag["href"])
 
         if articles == 100:
             break
-
-    print("Skipped: {} articles".format(skipped_articles))
 
 #Initial page with articles
 driver.get("https://www.radikale.dk/aktuelt/?typeId=-1&offset=90&limit=9")
