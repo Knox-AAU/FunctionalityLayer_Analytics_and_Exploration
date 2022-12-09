@@ -28,8 +28,8 @@ def scrapeArticle(driver):
     article_text = soup.find("h1", class_="title2 text-blue-100 mt-6").text
     article_text += ". "
 
-    #Subtitle
-    article_text += soup.find("div", class_="richText").text
+    #subheader
+    article_text += soup.find("div", class_="richText").text + " "
     
     #Body
     article = soup.find("div", class_="richText neos-nodetypes-text")
@@ -38,7 +38,7 @@ def scrapeArticle(driver):
     else: 
         article = soup.find("div", class_="richText")
     for p in article.find_all("p"):
-        article_text += p.text  
+        article_text += p.text + " "
     
     return article_text
 

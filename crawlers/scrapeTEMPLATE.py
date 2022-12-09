@@ -30,13 +30,13 @@ def scrapeArticle(driver):
 
     #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-    #Subtitle
-    article_text += soup.find("", class_="").text
+    #subheader
+    article_text += soup.find("", class_="").text + " "
 
     #Body
     article = soup.find("", class_="")
     for p in article.find_all(""):
-        article_text += p.text  
+        article_text += p.text + " "
     
     return article_text
 

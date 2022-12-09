@@ -11,7 +11,7 @@ abs_path = os.path.dirname(__file__)
 rel_path = r"lib\\geckodriver.exe"
 
 option = webdriver.FirefoxOptions()
-#option.headless = True
+option.headless = True
 option.binary_location = r"C:\\Program Files\\Mozilla Firefox\\firefox.exe"
 driverService = Service(os.path.join(abs_path, rel_path))
 driver = webdriver.Firefox(service=driverService, options=option)
@@ -26,15 +26,15 @@ def scrapeArticlePia(driver):
     article_text = soup.find("h1", class_="c-article-top-info__title").text
     article_text += ". "
 
-    #Subtitle
-    article_text += soup.find("p", class_="c-article-top-info__description").text
+    #subheader
+    article_text += soup.find("p", class_="c-article-top-info__description").text + " "
 
     #Body
     text_bodies = soup.find_all("div", class_="c-article-inline-element-container__text-width")
     text_bodies.pop() #Every Jyllands Posten article ends in a contact reminder
     for paragraph in text_bodies:
         for p in paragraph.find_all("p"):
-            article_text += p.text
+            article_text += p.text + " "
     
     return article_text
 
@@ -108,10 +108,11 @@ def readyPage(driver):
 
     findArticles(driver, "")
 
-#Initial page with articles
+#Removing cookie notice immidiately from JP before accessing articles
 driver.get("https://jyllands-posten.dk/")
 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "CybotCookiebotDialogBodyButton"))).click()
 
+#Where all of DF's news articles are archived
 driver.get("https://danskfolkeparti.dk/nyheder/")
 
 readyPage(driver)

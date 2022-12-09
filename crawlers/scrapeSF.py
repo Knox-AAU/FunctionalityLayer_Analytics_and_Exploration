@@ -33,11 +33,6 @@ def scrapeArticle(driver):
     article_text = article.find("h1", attrs={"class": None}).text
     article_text += ". "
 
-    #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
-    #Subtitle
-    #article_text += soup.find("", class_="").text
-
     #Body
     index = 0
     for p in article.find_all("p"):

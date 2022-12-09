@@ -28,11 +28,6 @@ def scrapeArticle(driver):
     article_text = soup.find("h1", class_="gdlr-blog-title").text
     article_text += ". "
 
-    #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
-    #Subtitle
-    #article_text += soup.find("", class_="").text
-
     #Body
     article = soup.find("div", class_="gdlr-blog-content")
     for p in article.find_all("p"):

@@ -31,11 +31,6 @@ def scrapeArticle(driver):
     else:
         return article_text
 
-    #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
-    #Subtitle
-    #article_text += soup.find("", class_="").text
-
     #Body
     article = soup.find("div", class_="col-sm-8 col-sm-push-4 col-content")
     for p in article.find_all("p"):
@@ -96,8 +91,5 @@ def getArticles(driver, page_num, articles):
 
 #Initial page with articles
 driver.get("https://alternativet.dk/nyheder/seneste")
-
-#Cookie notice
-#WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, ""))).click()
 
 getArticles(driver, page_num, articles)

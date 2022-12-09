@@ -32,7 +32,7 @@ def scrapeArticle(driver):
         article_text = soup.find("h1", class_="o-headline-1 inline").text
     article_text += ". "
 
-    #Subtitle
+    #subheader
     article_text += soup.find("div", class_="leading-130").text
 
     #Body

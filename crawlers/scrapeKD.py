@@ -21,13 +21,12 @@ page_num = 1
 def getBody(driver, article_html, text):
     body = article_html.find("div", "et_pb_text_inner")
     for p in body.find_all("p"):
-        text += p.text 
-        text += " "
+        text += p.text + " "
     return text
 
 def getSubTitle(driver, article_html, text):
     subtitle = article_html.find("div", class_="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light")
-    text += subtitle.find("h4", attrs={"class": None}).text
+    text += subtitle.find("h4", attrs={"class": None}).text + " "
     body = article_html.find("div", class_="et_pb_module et_pb_text et_pb_text_1 et_pb_text_align_left et_pb_bg_layout_light")
     return getBody(driver, body, text)
 
@@ -41,12 +40,12 @@ def scrapeArticle(driver):
     article_text = soup.find("h1", class_="entry-title").text
     article_text += ". "
 
-    #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
+    #Finding the div containing the article in the parse tree
     article = soup.find("div", class_="et_pb_column et_pb_column_3_4 et_pb_column_1 et_pb_css_mix_blend_mode_passthrough")
 
+    #If the article has a subtitle
     if article.find("div", class_="et_pb_module et_pb_text et_pb_text_1 et_pb_text_align_left et_pb_bg_layout_light") and article.find("div", class_="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light"):
-        #Subtitle
+        #subheader
         article_text = getSubTitle(driver, article, article_text)
     else:
         article_text = getBody(driver, article, article_text)
