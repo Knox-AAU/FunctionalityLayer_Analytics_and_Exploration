@@ -55,6 +55,8 @@ def getArticles(driver, page_num, articles):
         articles += 1
         driver.get(link["href"])
 
+        print("Getting: "+ link["href"])
+
         #Saving the articles
         if (articles < 10):
             with open("articles\\0{}.txt".format(articles), "w", encoding="utf-8") as f:
@@ -77,8 +79,6 @@ def getArticles(driver, page_num, articles):
                     articles -= 1
         
         f.close
-
-        print("{}: ".format(articles) + link["href"])
 
         if articles == 100:
             break

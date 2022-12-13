@@ -59,6 +59,8 @@ def getArticles(driver, page_num, articles):
         articles += 1
         driver.get("https://www.radikale.dk" + tag["href"])
 
+        print("Getting: "+ tag["href"])
+
         file_length = ""
 
         #Saving the articles
@@ -81,8 +83,6 @@ def getArticles(driver, page_num, articles):
                 if len(file_length) < 100:
                     print("Skipping")
                     articles -= 1
-
-        print("{}: ".format(articles) + tag["href"])
 
         if articles == 100:
             break

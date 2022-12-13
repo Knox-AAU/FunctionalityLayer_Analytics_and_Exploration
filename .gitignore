@@ -1,4 +1,4 @@
 
-crawlers/geckodriver.log
+geckodriver.log
 articles/*
 *.cache

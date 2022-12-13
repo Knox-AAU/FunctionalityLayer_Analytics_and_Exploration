@@ -92,6 +92,8 @@ def findArticles(driver, last_articles_found):
             link = article.find("a", class_="post-link-btn")
             driver.get(link["href"])
 
+            print("Getting: "+ link["href"])
+
             if (article.find("p", class_="post-category-timeline").text == "Mortens Nyhedsbrev "):
                 print("Getting Morten: {} -|- {}".format(article.find("h4", attrs={"class": None}).text, link["href"]))
                 saveArticle(scrapeArticleMorten(driver), article_num)

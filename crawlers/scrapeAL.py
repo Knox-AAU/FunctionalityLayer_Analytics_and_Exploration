@@ -50,11 +50,13 @@ def getArticles(driver, page_num, articles):
         articles += 1
         driver.get(link["href"])
 
+        print("Getting: "+ link["href"])
+
         #Saving the articles
         if (articles < 10):
-            with open("articles\\0{}.txt".format(articles), "w", encoding="utf-8") as f:
+            with open("crawlers\\articles\\0{}.txt".format(articles), "w", encoding="utf-8") as f:
                 f.write(scrapeArticle(driver))
-            with open("articles\\0{}.txt".format(articles), "r", encoding="utf-8") as f:
+            with open("crawlers\\articles\\0{}.txt".format(articles), "r", encoding="utf-8") as f:
                 file = f.read()
                 file_length = file.split()
                 if len(file_length) < 100:
@@ -73,7 +75,7 @@ def getArticles(driver, page_num, articles):
         
         f.close
 
-        print("{}: ".format(articles) + link["href"])
+        
 
         if articles == 100:
             break

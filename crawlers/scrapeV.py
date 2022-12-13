@@ -51,10 +51,13 @@ def getArticles(driver, page_num, articles):
     #Getting the links to articles
     for tag in soup.find_all("a", class_="focus:outline-none"):
         articles += 1
+        #This page is broken and will break the crawler.
         if tag["href"] == "https://www.venstre.dk/nyheder/sommergruppemode-det-skal-kunne-betale-sig-at-arbejde":
             continue
         else: 
             driver.get(tag["href"])
+
+        print("Getting: "+ tag["href"])
 
         #Saving the articles
         if (articles < 10):
@@ -80,8 +83,6 @@ def getArticles(driver, page_num, articles):
                     skipped_articles += 1
         
         f.close
-
-        print("{}: ".format(articles) + tag["href"])
 
         if articles == 100:
             break
