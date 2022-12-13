@@ -35,8 +35,7 @@ function draw_network(network) {
         PADDING, height - PADDING,
         network.layers.length, layers_neuron_counts);
 
-    for (let i = 0; i < network.layers.length; i++)
-    {
+    for (let i = 0; i < network.layers.length; i++) {
         const layer = network.layers[i];
         let column = positions[i];
 
@@ -57,8 +56,8 @@ function draw_network(network) {
             // draw weights to previous layer
             ctx.globalCompositeOperation = 'destination-over';
             if (i > 0) {
-                ctx.beginPath();
                 for (let k = 0; k < neuron.weights.length; k++) {
+                    ctx.beginPath();
                     let connecting_neuron = positions[i - 1][k];
                     let [_x, _y] = connecting_neuron;
 
@@ -72,19 +71,19 @@ function draw_network(network) {
                     const end_1 = [lerp(x, _x, 0.5), h];
                     const colour = weight_to_rgb(neuron.weights[k]);
 
-                    ctx.strokeStyle = `rgb(${colour.r},${colour.g}, ${colour.b})`;                    
+                    ctx.strokeStyle = `rgb(${colour.r},${colour.g}, ${colour.b})`;
 
                     ctx.moveTo(x, y);
                     ctx.quadraticCurveTo(
                         cp_1[0], cp_1[1], end_1[0], end_1[1]
                     )
-                    
+
                     ctx.quadraticCurveTo(
                         cp_2[0], cp_2[1], _x, _y
                     )
-                    
+                    ctx.stroke();
+
                 }
-                ctx.stroke();
             }
             ctx.globalCompositeOperation = 'source-over';
         }

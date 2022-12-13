@@ -10,6 +10,7 @@ namespace AnalyticsAndExploration
 	{
 		public static void Main(string[] args)
 		{
+
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
@@ -21,8 +22,8 @@ namespace AnalyticsAndExploration
 
 			var app = builder.Build();
 
-			
-			
+
+
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())
@@ -48,20 +49,20 @@ namespace AnalyticsAndExploration
 			app.MapControllers();
 
 
-			NeuralNetwork.Network network = new(2, new int[] { 2, 2}, 2);
+			NeuralNetwork.Network network = new(412, new int[] { 2, 2}, 2);
 			network.SetLearnRate(0.1d);
-            Thread t = new Thread(new ThreadStart(() => TrainAndEvaluateNetwork(network)));
+			Thread t = new Thread(new ThreadStart(() => TrainAndEvaluateNetwork(network)));
 			t.Start();
 
-            app.Run();
+			app.Run();
 		}
 
 		public static void TrainAndEvaluateNetwork(NeuralNetwork.Network network)
 		{
-            NeuralNetwork.DataPoint[] data = NeuralNetwork.Utilities.ReadDataPoints("data_berries.json");
-            var (TrainingData, TestData) = NeuralNetwork.Utilities.SplitData(data, 0.8);
+            NeuralNetwork.DataPoint[] data = NeuralNetwork.Utilities.ReadDataPoints("TrainingData/output.json");
+            var (TrainingData, TestData) = NeuralNetwork.Utilities.SplitData(data, 1.0d/3.0d);
 
-            NeuralNetwork.Utilities.RunEpochs(network, TrainingData, 1000, 10);
+            NeuralNetwork.Utilities.RunEpochs(network, TrainingData, 200, logEvery:1);
             NeuralNetwork.Utilities.CalculateEvalutation(network, TrainingData, TestData);
         }
 	}

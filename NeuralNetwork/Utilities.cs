@@ -14,10 +14,11 @@ namespace NeuralNetwork
 			return value;
 		}
 
-		public static void RunEpochs(Network network, DataPoint[] data, int epochs, int logEvery = 100)
+		public static void RunEpochs(Network network, DataPoint[] data, int epochs, int logEvery = 10)
 		{
 			DateTime startingTime = DateTime.Now;
 			int epochsWidth = (epochs + 1).ToString().Length;
+			Console.WriteLine("Started learning...");
 			for (int i = 1; i < epochs + 1; i++)
 			{
 				network.Epoch(data);
