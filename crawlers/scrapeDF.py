@@ -11,7 +11,7 @@ abs_path = os.path.dirname(__file__)
 rel_path = r"lib\\geckodriver.exe"
 
 option = webdriver.FirefoxOptions()
-option.headless = True
+option.headless = False
 option.binary_location = r"C:\\Program Files\\Mozilla Firefox\\firefox.exe"
 driverService = Service(os.path.join(abs_path, rel_path))
 driver = webdriver.Firefox(service=driverService, options=option)
@@ -61,11 +61,11 @@ def scrapeArticleMorten(driver):
 def saveArticle(article, article_num):
     #Saving the articles
         if (article_num < 10):
-            with open("articles\\0{}.txt".format(article_num), "w", encoding="utf-8") as f:
+            with open("{}\\articles\\0{}.txt".format(abs_path, article_num), "w", encoding="utf-8") as f:
                 f.write(article)
 
         else:
-            with open("articles\\{}.txt".format(article_num), "w", encoding="utf-8") as f:
+            with open("{}\\articles\\0{}.txt".format(abs_path, article_num), "w", encoding="utf-8") as f:
                 f.write(article)
         
         f.close
@@ -104,9 +104,9 @@ def findArticles(driver, last_articles_found):
 
 def readyPage(driver):
     
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div[2]/main/div/section/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/div[1]/div/div[4]/label[1]/span"))).click()
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/main/div/section/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/div[1]/div/div[5]/label[1]/span").click()
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/main/div/section/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/div[2]/a[2]").click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/main/div/section/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/div[1]/div/div[4]/label[1]/span"))).click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/main/div/section/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/div[1]/div/div[5]/label[1]/span").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/main/div/section/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/div[2]/a[2]").click()
 
     findArticles(driver, "")
 
