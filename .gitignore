@@ -900,3 +900,4 @@ poetry.toml
 
 geckodriver.log
 Web-Scrapers/articles/*
+.vscode/
