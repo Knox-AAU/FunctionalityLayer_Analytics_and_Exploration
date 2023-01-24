@@ -67,7 +67,7 @@ async function main() {
 	let csv = 'party_id,document_text,document_lemmatized\n';
 	for (let parti of all_parties) {
 		for (let article of parti.articles) {
-			csv += `${parti.name},"","${article.lemmatized}"\n`;
+			csv += `${parti.name},"${article.article_text}","${article.lemmatized}"\n`;
 		}
 	}
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\skovborg\\source\\repos\\WebApplication\\NeuralNetwork\\NeuralNetwork.csproj": {}
+    "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\skovborg\\source\\repos\\WebApplication\\NeuralNetwork\\NeuralNetwork.csproj": {
+    "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\NeuralNetwork\\NeuralNetwork.csproj",
+        "projectUniqueName": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj",
         "projectName": "NeuralNetwork",
-        "projectPath": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\NeuralNetwork\\NeuralNetwork.csproj",
-        "packagesPath": "C:\\Users\\skovborg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\NeuralNetwork\\obj\\",
+        "projectPath": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj",
+        "packagesPath": "C:\\Users\\Ander\\.nuget\\packages\\",
+        "outputPath": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\skovborg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,12 +56,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

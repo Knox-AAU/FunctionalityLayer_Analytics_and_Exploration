@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uka2CLLL5JJ+GP9ZbH9DdVxHVrjZLmW7zuE0Q/tGwX4=",
+  "Hash": "FNkfD6vOwvk/aMVICnJGT43NRwrtavKNt8JE0V+SFyM=",
   "Source": "AnalyticsAndExploration",
   "BasePath": "_content/AnalyticsAndExploration",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "AnalyticsAndExploration\\wwwroot",
       "Source": "AnalyticsAndExploration",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\bundle\\AnalyticsAndExploration.styles.css",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\bundle\\AnalyticsAndExploration.styles.css",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "AnalyticsAndExploration.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\bundle\\AnalyticsAndExploration.styles.css"
+      "OriginalItemSpec": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\bundle\\AnalyticsAndExploration.styles.css"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AnalyticsAndExploration.bundle.scp.css",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AnalyticsAndExploration.bundle.scp.css",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "AnalyticsAndExploration.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AnalyticsAndExploration.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AnalyticsAndExploration.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\css\\site.css",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\favicon.ico",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\index.html",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\index.html",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\library.js",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\library.js",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "library.js",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\library.js"
     },
     {
-      "Identity": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\nncanvas.js",
+      "Identity": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\nncanvas.js",
       "SourceId": "AnalyticsAndExploration",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\wwwroot\\",
+      "ContentRoot": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\wwwroot\\",
       "BasePath": "_content/AnalyticsAndExploration",
       "RelativePath": "nncanvas.js",
       "AssetKind": "All",

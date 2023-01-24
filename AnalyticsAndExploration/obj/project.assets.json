@@ -70,19 +70,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\skovborg\\.nuget\\packages\\": {}
+    "C:\\Users\\Ander\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\AnalyticsAndExploration.csproj",
+      "projectUniqueName": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\AnalyticsAndExploration.csproj",
       "projectName": "AnalyticsAndExploration",
-      "projectPath": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\AnalyticsAndExploration.csproj",
-      "packagesPath": "C:\\Users\\skovborg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\AnalyticsAndExploration\\obj\\",
+      "projectPath": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\AnalyticsAndExploration.csproj",
+      "packagesPath": "C:\\Users\\Ander\\.nuget\\packages\\",
+      "outputPath": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\AnalyticsAndExploration\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\skovborg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -96,8 +96,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\skovborg\\source\\repos\\WebApplication\\NeuralNetwork\\NeuralNetwork.csproj": {
-              "projectPath": "C:\\Users\\skovborg\\source\\repos\\WebApplication\\NeuralNetwork\\NeuralNetwork.csproj"
+            "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj": {
+              "projectPath": "C:\\Github repos\\FunctionalityLayer_Analytics_and_Exploration\\NeuralNetwork\\NeuralNetwork.csproj"
             }
           }
         }
@@ -130,7 +130,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

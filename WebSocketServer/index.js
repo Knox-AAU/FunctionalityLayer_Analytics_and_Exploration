@@ -14,8 +14,6 @@ app.use(express.json());
 expressWs(app);
 
 app.use(morgan("combined"));
-/*  */
-
 
 /* Decode neural network from binary file */
 const neuronParser = new Parser()

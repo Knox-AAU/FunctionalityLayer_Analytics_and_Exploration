@@ -46,3 +46,15 @@ C:\Users\skovborg\source\repos\WebApplication\NeuralNetwork\obj\Debug\net5.0\Neu
 C:\Users\skovborg\source\repos\WebApplication\NeuralNetwork\obj\Debug\net5.0\refint\NeuralNetwork.dll
 C:\Users\skovborg\source\repos\WebApplication\NeuralNetwork\obj\Debug\net5.0\NeuralNetwork.pdb
 C:\Users\skovborg\source\repos\WebApplication\NeuralNetwork\obj\Debug\net5.0\ref\NeuralNetwork.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\NeuralNetwork.csproj.AssemblyReference.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\NeuralNetwork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\NeuralNetwork.AssemblyInfoInputs.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\NeuralNetwork.AssemblyInfo.cs
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\NeuralNetwork.csproj.CoreCompileInputs.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\NeuralNetwork.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\refint\NeuralNetwork.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\NeuralNetwork.pdb
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\bin\Debug\net5.0\NeuralNetwork.deps.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\bin\Debug\net5.0\NeuralNetwork.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\bin\Debug\net5.0\NeuralNetwork.pdb
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\NeuralNetwork\obj\Debug\net5.0\ref\NeuralNetwork.dll

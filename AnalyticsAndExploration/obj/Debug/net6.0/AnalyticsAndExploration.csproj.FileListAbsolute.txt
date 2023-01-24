@@ -41,3 +41,39 @@ C:\Users\skovborg\source\repos\WebApplication\AnalyticsAndExploration\obj\Debug\
 C:\Users\skovborg\source\repos\WebApplication\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.genruntimeconfig.cache
 C:\Users\skovborg\source\repos\WebApplication\AnalyticsAndExploration\obj\Debug\net6.0\ref\AnalyticsAndExploration.dll
 C:\Users\skovborg\source\repos\WebApplication\AnalyticsAndExploration\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\refint\AnalyticsAndExploration.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.pdb
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.csproj.AssemblyReference.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.AssemblyInfoInputs.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.AssemblyInfo.cs
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.csproj.CoreCompileInputs.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.MvcApplicationPartsAssemblyInfo.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.RazorAssemblyInfo.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.RazorAssemblyInfo.cs
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\appsettings.Development.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\appsettings.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\AnalyticsAndExploration.staticwebassets.runtime.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\AnalyticsAndExploration.exe
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\AnalyticsAndExploration.deps.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\AnalyticsAndExploration.runtimeconfig.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\AnalyticsAndExploration.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\AnalyticsAndExploration.pdb
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\NeuralNetwork.dll
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\bin\Debug\net6.0\NeuralNetwork.pdb
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\staticwebassets\msbuild.AnalyticsAndExploration.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\staticwebassets\msbuild.build.AnalyticsAndExploration.props
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.AnalyticsAndExploration.props
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.AnalyticsAndExploration.props
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\staticwebassets.build.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\staticwebassets.development.json
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\scopedcss\bundle\AnalyticsAndExploration.styles.css
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\scopedcss\projectbundle\AnalyticsAndExploration.bundle.scp.css
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.csproj.CopyComplete
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\AnalyticsAndExploration.genruntimeconfig.cache
+C:\Github repos\FunctionalityLayer_Analytics_and_Exploration\AnalyticsAndExploration\obj\Debug\net6.0\ref\AnalyticsAndExploration.dll

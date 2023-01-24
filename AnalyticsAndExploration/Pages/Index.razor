@@ -1,9 +1,15 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Network</PageTitle>
 
-<h1>Hello, world!</h1>
+@inject IJSRuntime JS
 
-Welcome to your new app. You suck, like a lot
+<h2>Neural Network</h2>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div>
+	<p id="ws-status">
+	</p>
+	<canvas width="1280" height="720" id="nn-canvas">
+		
+	</canvas>
+</div>
