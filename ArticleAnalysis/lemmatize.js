@@ -9,8 +9,6 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const body = { "string": "jeg løber han løb", "language": "da" };
-
 const URL = "http://0.0.0.0:5001/"
 
 /** @typedef {{name: string, content: string, lemmatized: string}} Article */
@@ -42,7 +40,6 @@ function get_all_parties() {
 }
 
 async function main() {
-
 	const all_parties = get_all_parties();
 
 	/* Batch process each parties articles */

@@ -9,7 +9,6 @@ namespace NeuralNetwork
 
 		public bool IsInputLayer = false;
 
-
 		public Layer(Neuron[] neurons)
         {
 			Neurons = neurons;

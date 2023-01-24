@@ -6,9 +6,9 @@ namespace NeuralNetwork
 	public class Neuron
 	{
 		private static Random RNG = new Random();
+
 		public double[] Weights { get; private set; }
 		public double Bias { get; private set; }
-
 		public double[] WeightGradient;
 		public double BiasGradient = 0f;
 		public bool[] GoodWeightNudge;
@@ -32,7 +32,6 @@ namespace NeuralNetwork
 			}
 			Bias = RNG.NextDouble() * 2 - 1;
 		}
-
 
 		public Neuron(double[] weights, double bias)
 		{
@@ -61,6 +60,5 @@ namespace NeuralNetwork
 				Output += Weights[i] * Values[i];
 			return Output + Bias;
 		}
-
 	}
 }

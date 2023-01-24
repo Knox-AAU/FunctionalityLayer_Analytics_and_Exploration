@@ -9,19 +9,13 @@ namespace AnalyticsAndExploration
 	{
 		public static void Main(string[] args)
 		{
-
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
 			builder.Services.AddRazorPages();
 			builder.Services.AddServerSideBlazor();
 			builder.Services.AddControllers();
-
-
 			var app = builder.Build();
-
-
-
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())
@@ -41,11 +35,9 @@ namespace AnalyticsAndExploration
 			app.UseStaticFiles();
 			app.UseRouting();
 
-
 			app.MapBlazorHub();
 			app.MapFallbackToPage("/_Host");
 			app.MapControllers();
-
 
 			NeuralNetwork.Network network = new(412, new int[] { 2, 2}, 2);
 			network.SetLearnRate(0.1d);

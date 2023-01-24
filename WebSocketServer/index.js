@@ -1,7 +1,6 @@
 const express = require("express");
 const expressWs = require("express-ws");
 const morgan = require("morgan");
-const binaryParser = require("binary-parser").Parser;
 const fs = require("fs");
 const path = require("path");
 const { Parser } = require("binary-parser");
@@ -43,8 +42,6 @@ function parseNetwork(blob) {
 	const network = neuralNetwork.parse(blob);
 	return network;
 }
-
-
 
 app.ws('/network', (client, req) => {
 	console.log(`Got client [${req.headers.origin}]`);

@@ -3,7 +3,6 @@ import * as fs from "fs"
 import verbs from "./word_banks/verbs.json" assert {type: 'json'};
 import adverbs from "./word_banks/adverbs.json" assert {type: 'json'};
 
-
 const results = [];
 fs.createReadStream('lemmatized_articles.csv')
 	.pipe(csv())
@@ -37,10 +36,7 @@ const Answers = {
  * @param {Article[]} articles
  */
 function process(articles) {
-
-
 	const cleaned_strings = articles.map(a => a.document_lemmatized.replace(/[^a-zA-ZæøåÆØÅ ]/g, "").toLowerCase());
-
 	const word_counts = {};
 
 	// Count all words
@@ -73,15 +69,8 @@ function process(articles) {
 	// compute the fractional usage of each word
 	const max_used = relevant_words[0].count;
 	relevant_words.forEach(w => {
-
-		const value = lerp(-1, 1, w.count / max_used)
-		const sign = Math.sign(value);
-		//w.fraction = sign * Math.sqrt(Math.abs(value));
 		w.fraction = Math.round((w.count / max_used) * 10000) / 10000;
 	});
-
-
-
 
 	const output_csv = "word,count,fraction\n" + relevant_words.map(w => `${w.word},${w.count},${w.fraction}`).join("\n");
 	fs.writeFileSync("output.csv", output_csv);
@@ -130,13 +119,7 @@ function compute_relevant_states(article, relevant_words) {
 
 	const states = relevant_words.map(w => {
 		const count = word_counts[w.word] || 0;
-		const value = lerp(-1, 1, count / max_used)
 		return Math.round((count / max_used) * 10000) / 10000;
 	});
 	return states;
 }
-
-function lerp(a, b, margin) {
-	return a + (b - a) * margin;;
-}
-
