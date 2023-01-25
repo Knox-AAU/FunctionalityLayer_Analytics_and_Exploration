@@ -4,14 +4,12 @@ using System.IO;
 
 namespace NeuralNetwork
 {
-
 	public class Network
 	{
 		public double LearnRate { get; private set; } = 0.1d;
 		public Func<double, double> Activation { get; private set; } = Activations.Contain;
         
 		private Layer[] InnerLayers;
-
 
         public Network(Layer[] layers, double learnRate)
         {
@@ -37,7 +35,6 @@ namespace NeuralNetwork
 			InnerLayers[hiddenLayers.Length + 1] = new Layer(outputCount, InnerLayers[hiddenLayers.Length].Neurons.Length);
 
 			Activation = Activations.DoubleSigmoid;
-
 		}
 
         public Network SetLearnRate(double rate)

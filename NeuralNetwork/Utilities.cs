@@ -19,6 +19,7 @@ namespace NeuralNetwork
 			DateTime startingTime = DateTime.Now;
 			int epochsWidth = (epochs + 1).ToString().Length;
 			Console.WriteLine("Started learning...");
+			
 			for (int i = 1; i < epochs + 1; i++)
 			{
 				network.Epoch(data);
@@ -40,8 +41,8 @@ namespace NeuralNetwork
 		}
 
 		public static void CalculateEvalutation(Network network, DataPoint[] trainingData, DataPoint[] testData) {
-
 			int TrainingCorrectGuess = 0;
+
 			foreach (DataPoint dataPoint in trainingData)
 			{
 				double[] ComputedGuess = network.Compute(dataPoint.State);
